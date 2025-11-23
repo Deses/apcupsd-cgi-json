@@ -1,6 +1,12 @@
 # apcupsd-cgi-json
 A simple cgi file that contains python to output a json of the [APCUPSD](https://sourceforge.net/projects/apcupsd/) status. I use it to monitor the UPS from [Uptime Kuma](https://uptimekuma.org/).
 
+#### - Uptime Kuma config
+<img width="394" height="556" alt="Uptime Kuma config" src="https://github.com/user-attachments/assets/7b818a54-c393-424f-8b46-ce2448b365e9" />
+
+#### - Uptime Kuma properly retrieving the status from the json output
+<img width="321" height="109" alt="Uptime Kuma properly retrieving the status from the json output" src="https://github.com/user-attachments/assets/61cd011a-890b-4075-82b9-285222a09c1e" />
+
 # Installation:
 
 1. Install apache2 and apcupsd-cgi as usual:
