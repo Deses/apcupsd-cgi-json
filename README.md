@@ -22,7 +22,7 @@ This works for an apcupsd that it's publishing it's status through IP:3551, and 
     sudo apt install apcupsd-cgi
     ```
 
-2. Edit the file where the monitored devices are saved:
+2. Edit the file where the monitored devices are saved. You might have one monitor already set on 127.0.0.1:
    
     `nano /etc/apcupsd/hosts.conf`
 
@@ -59,7 +59,7 @@ This works for an apcupsd that it's publishing it's status through IP:3551, and 
     nano json.cgi
     ```
     Paste the contents of [json.cgi](https://github.com/Deses/apcupsd-cgi-json/blob/main/json.cgi)
-    Save, grant it permissions and proper ownershio (maybe not needed) and restart apache2:
+    Save, grant it permissions and proper ownership (you might not need this, I didn't), and restart apache2:
     ```
     chmod 0755 json.cgi
     chown root:www-data json.cgi
