@@ -26,11 +26,11 @@ This works for an apcupsd that it's publishing it's status through IP:3551, and 
    
     `nano /etc/apcupsd/hosts.conf`
 
-4. Edit the Apache configuration:
+3. Edit the Apache configuration:
    
    `nano /etc/apache2/apache2.conf`
 
-5. Find this section and change `denied` to `granted`:
+4. Find this section and change `denied` to `granted`:
     ```
     <Directory />
        Options FollowSymLinks
@@ -42,24 +42,24 @@ This works for an apcupsd that it's publishing it's status through IP:3551, and 
 
     `ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/`
 
-6. Save and restart Apache:
+5. Save and restart Apache:
    
      `sudo service apache2 restart`
 
-7. Now access:
+6. Now access:
  
    `http://SERVER-IP/cgi-bin/apcupsd/multimon.cgi`
 
-8. You'll see a screen similar to this. If you do, you configured `apcupsd-cgi` correctly:
+7. You'll see a screen similar to this. If you do, you configured `apcupsd-cgi` correctly:
    <img width="843" height="225" alt="image" src="https://github.com/user-attachments/assets/d68fc7aa-1ee0-42c6-8296-8beac8eb3ba1" />
 
-9. To install the `json.cgi`, create this file:
+8. To install the `json.cgi`, create this file:
     ```
     cd /usr/lib/cgi-bin/apcupsd/
     nano json.cgi
     ```
     Paste the contents of [json.cgi](https://github.com/Deses/apcupsd-cgi-json/blob/main/json.cgi)
-    Save, grant it permissions and proper ownership (you might not need this, I didn't), and restart apache2:
+9. Save, grant it permissions and proper ownership (you might not need this, I didn't), and restart apache2:
     ```
     chmod 0755 json.cgi
     chown root:www-data json.cgi
